@@ -1,0 +1,27 @@
+{
+    "name": "alyatek/smspubli-api",
+    "description": "Shortcuts for SMSPUBLI",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "php": ">=7.0.0",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^6.3",
+        "php": ">=7.0.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cesar Correia",
+            "email": "cesardcorreia@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": {
+            "SmsPubli": "src/"
+        }
+    }
+}
