@@ -10,6 +10,24 @@ class SmsClient implements SmsClientInterface
     public $message, $status;
 
     /**
+     * Calls the from validation function and assigns the general variables for API usage
+     *
+     * SmsClient constructor.
+     * @param $key
+     * @param $from
+     * @param null $callback
+     * @throws \Exception
+     */
+    public function __construct($key, $from, $callback = null)
+    {
+        $this->validate_from($from);
+        $this->api_key = $key;
+        $this->from = $from;
+        $this->report_url = $callback;
+        return $this;
+    }
+
+    /**
      * Validates the name of the FROM parameter on the API in which it can not be
      * longer than 11 characters.
      * @param $from
@@ -19,7 +37,6 @@ class SmsClient implements SmsClientInterface
     {
         if (strlen($from) > 11) throw new \Exception('From can not be longer than 11 characters');
     }
-
 
     /**
      * Calls the Validation Class to verify every parameter of the contact to check out if it is valid or not
@@ -70,24 +87,6 @@ class SmsClient implements SmsClientInterface
         return $this;
     }
 
-    /**
-     * Calls the from validation function and assigns the general variables for API usage
-     *
-     * SmsClient constructor.
-     * @param $key
-     * @param $from
-     * @param null $callback
-     * @throws \Exception
-     */
-    public function __construct($key, $from, $callback = null)
-    {
-        $this->validate_from($from);
-        $this->api_key = $key;
-        $this->from = $from;
-        $this->report_url = $callback;
-        return $this;
-    }
-
     public function send_sms($to_contact, $message)
     {
         $this->validate_contact($to_contact);
@@ -125,6 +124,6 @@ class SmsClient implements SmsClientInterface
 
     public function getStatus()
     {
-        return ['status' => $this->status, $this->message];
+        return array_merge(['status' => $this->status], $this->message);
     }
 }
