@@ -38,8 +38,7 @@ $send = $sms_client->send_sms(SMSNUMBER, 'Your Message')->getStatus();
 
 ```
 
-The request returns an array with a boolean variable `status`, and a response from the server according to the answer received.
-If it is `true` results in a `success_msg`, `sms_id` and if it is an error it returns `success_msg`, `sms_id`.
+The request returns an array with a variable `status`, with the server request status(200 if request was ok).
 
 
 For testing you need to create a config.php file inside tests and declare the following
