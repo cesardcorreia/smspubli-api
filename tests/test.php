@@ -5,5 +5,3 @@ include'config.php'; //Holds a constant variable for the api key and contact for
 use SmsPubli\SmsClient;
 $sms_client = new SmsClient(SMSPUBLIKEY, 'BARBERSMS');
 $send = $sms_client->send_sms(SMSNUMBER, 'Omds isto resultou com o primeiro pacote')->getStatus();
-
-var_dump($send);

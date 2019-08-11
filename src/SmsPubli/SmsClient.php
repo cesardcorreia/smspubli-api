@@ -30,7 +30,7 @@ class SmsClient implements SmsClientInterface
     private function validate_contact($contact)
     {
         $contact_validator = new ContactValidator();
-        if($contact_validator->validate($contact)['is_valid'] !== true){
+        if ($contact_validator->validate($contact)['is_valid'] !== true) {
             throw new \Exception('Validating this contact as failed!');
         }
     }
@@ -56,14 +56,17 @@ class SmsClient implements SmsClientInterface
                 'error_id' => $status_response['result'][0]['error_id'],
                 'error_msg' => $status_response['result'][0]['error_msg']
             ];
+            return $this;
         } elseif ($status_response['result'][0]['status'] === "ok") {
             $this->message = [
                 'success_msg' => 'Sent with success!',
                 'sms_id' => $status_response['result'][0]['sms_id']
             ];
-        } else {
-            $this->message = ['Something went wrong is the status response answer.'];
+            return $this;
         }
+
+        $this->message = ['Something went wrong is the status response answer.'];
+
         return $this;
     }
 
@@ -85,9 +88,9 @@ class SmsClient implements SmsClientInterface
         return $this;
     }
 
-    public function send_sms($to, $message)
+    public function send_sms($to_contact, $message)
     {
-        $this->validate_contact($to);
+        $this->validate_contact($to_contact);
 
         $response = new Client();
 
@@ -104,7 +107,7 @@ class SmsClient implements SmsClientInterface
                     'messages' => [
                         [
                             'from' => $this->from,
-                            'to' => $to,
+                            'to' => $to_contact,
                             'text' => $message
                         ]
                     ]

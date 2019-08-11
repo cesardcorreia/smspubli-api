@@ -5,7 +5,6 @@ namespace SmsPubli;
 class ContactValidator
 {
     public $is_valid = false, $data;
-    private $country_code;
 
     /**
      * Checks via regex if content of string is digits.
@@ -16,8 +15,8 @@ class ContactValidator
      */
     private function validate_contact($contact)
     {
-        $re = '/^([\d]*)$/m';
-        preg_match_all($re, $contact, $matches, PREG_SET_ORDER, 0);
+        $pattern = '/^([\d]*)$/m';
+        preg_match_all($pattern, $contact, $matches, PREG_SET_ORDER, 0);
 
         if (count($matches) === 0 || empty($matches)) {
             throw new \Exception('This contact is invalid.');
@@ -36,8 +35,8 @@ class ContactValidator
      */
     private function get_country_code($contact)
     {
-        $re = '/^([\d]{1,3})([\d]*)/m';
-        preg_match_all($re, $contact, $matches, PREG_SET_ORDER, 0);
+        $pattern = '/^([\d]{1,3})([\d]*)/m';
+        preg_match_all($pattern, $contact, $matches, PREG_SET_ORDER, 0);
 
         //if nothing means it is an invalid country code
         if (count($matches) === 0 || empty($matches)) throw new \Exception('Error validating the country code');
