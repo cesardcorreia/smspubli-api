@@ -46,8 +46,8 @@ If the request return anything else than a 200 Guzzle will throw an error.
 
 I recommend wrapping the request with try catch block for error handling.
 
-
-For testing you need to create a config.php file inside tests and declare the following
+### Testing
+For testing you need to create a config.php file inside tests folder and declare the following
 ```php
 <?php
 
