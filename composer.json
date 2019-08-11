@@ -2,6 +2,7 @@
     "name": "alyatek/smspubli-api",
     "description": "Shortcuts for SMSPUBLI",
     "type": "library",
+    "version": "0.0.5",
     "require": {
         "guzzlehttp/guzzle": "^6.3",
         "php": ">=7.0.0",
