@@ -2,6 +2,8 @@
 
 # SMSPUBLI API
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8fcdb2abf1cd4cae8abd358605caede3)](https://app.codacy.com/app/alyatek/smspubli-api?utm_source=github.com&utm_medium=referral&utm_content=alyatek/smspubli-api&utm_campaign=Badge_Grade_Dashboard)
+
 SMSPUBLI API is a library that makes even easier the usage of the [SMSPUBLI](https://www.smspubli.com/) api
 
 ## Installation
