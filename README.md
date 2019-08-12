@@ -35,7 +35,7 @@ Make sure you also have an account at [SMSPUBLI](https://www.smspubli.com/).
 use SmsPubli\SmsClient;
 
 $sms_client = new SmsClient(SMSPUBLIKEY, 'SMS NAME');
-$send = $sms_client->send_sms(SMSNUMBER, 'Your Message')->getStatus();
+$send = $sms_client->send_sms(SMSNUMBER, 'Your Message')->get_status();
 
 ```
 
