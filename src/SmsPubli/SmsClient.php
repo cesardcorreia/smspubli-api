@@ -6,6 +6,7 @@ use GuzzleHttp\Client;
 
 class SmsClient implements SmsClientInterface
 {
+    protected $build;
     private $api_key, $from, $report_url;
     public $message, $status;
 
@@ -25,6 +26,13 @@ class SmsClient implements SmsClientInterface
         $this->from = $from;
         $this->report_url = $callback;
         return $this;
+    }
+
+    /**
+     * Resets the object of build
+     */
+    public function reset () {
+        $this->build = new \stdClass;
     }
 
     /**
@@ -89,6 +97,8 @@ class SmsClient implements SmsClientInterface
 
     public function send_sms($to_contact, $message)
     {
+        $this->reset();
+        $this->build->sent = 1;
         $this->validate_contact($to_contact);
 
         $response = new Client();
@@ -113,8 +123,12 @@ class SmsClient implements SmsClientInterface
                 ],
                 'allow_redirects' => false,
             ]);
-        } catch (\Exception $e) {
-            return $e->getMessage();
+        } catch (\Exception $e) { //catch errors thrown by guzzle
+            $this->status = false;
+            $this->message = [
+                'error_msg' => $e->getMessage()
+            ];
+            return $this;
         }
 
         $this->handle_response($request, $request->getBody()->getContents());
@@ -122,8 +136,16 @@ class SmsClient implements SmsClientInterface
         return $this;
     }
 
-    public function getStatus()
+    /**
+    * Compiles the information of the given result by the sms call
+    *
+    * @return array
+    **/
+    public function get_status()
     {
+        //validate if send_sms was called
+        if(!isset($this->build->sent)) throw new \Exception('Can not call gesStatus before send_sms');
+
         return array_merge(['status' => $this->status], $this->message);
     }
 }
