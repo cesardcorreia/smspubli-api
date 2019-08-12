@@ -43,9 +43,7 @@ The request returns an array with a variable `status`, with the server request s
 
 If it is success - results in a `success_msg`, `sms_id` and if it is an error - it returns `success_msg`, `sms_id`.
 
-If the request return anything else than a 200, Guzzle will throw an error.
-
-I recommend wrapping the call above with try catch block for error handling.
+If Guzzle throws an error, it is returned a message with a status of false.
 
 ### Testing
 For testing you need to create a config.php file inside tests folder and declare the following
