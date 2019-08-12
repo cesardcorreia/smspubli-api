@@ -41,11 +41,11 @@ $send = $sms_client->send_sms(SMSNUMBER, 'Your Message')->getStatus();
 
 The request returns an array with a variable `status`, with the server request status(200 if request was ok).
 
-If it is success results in a `success_msg`, `sms_id` and if it is an error it returns `success_msg`, `sms_id`.
+If it is success - results in a `success_msg`, `sms_id` and if it is an error - it returns `success_msg`, `sms_id`.
 
-If the request return anything else than a 200 Guzzle will throw an error.
+If the request return anything else than a 200, Guzzle will throw an error.
 
-I recommend wrapping the request with try catch block for error handling.
+I recommend wrapping the call above with try catch block for error handling.
 
 ### Testing
 For testing you need to create a config.php file inside tests folder and declare the following
