@@ -99,11 +99,13 @@ class SmsClient implements SmsClientInterface
     {
         $this->reset();
         $this->build->sent = 1;
+
         $this->validate_contact($to_contact);
 
-        $response = new Client();
-
         try {
+            $response = new Client(); //Guzzle Client
+
+            //The parameters need to be sent as JSON or it will return an error
             $request = $response->request('POST', 'https://api.gateway360.com/api/3.0/sms/send', [
                 'headers' => [
                     'content-type' => 'application/json',
