@@ -1,6 +1,6 @@
 {
     "name": "alyatek/smspubli-api",
-    "description": "Shortcuts for SMSPUBLI",
+    "description": "SMSPubli API helper for easier use.",
     "type": "library",
     "require": {
         "guzzlehttp/guzzle": "^6.3",
