@@ -4,6 +4,7 @@
 
 ![PHP from Packagist](https://img.shields.io/packagist/php-v/alyatek/smspubli-api)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8fcdb2abf1cd4cae8abd358605caede3)](https://app.codacy.com/app/alyatek/smspubli-api?utm_source=github.com&utm_medium=referral&utm_content=alyatek/smspubli-api&utm_campaign=Badge_Grade_Dashboard)
+![CodeClimate](https://codeclimate.com/github/alyatek/smspubli-api/badges/gpa.svg)
 ![Scrutinizer](https://scrutinizer-ci.com/g/alyatek/smspubli-api/badges/build.png?b=master)
 ![Packagist](https://img.shields.io/packagist/l/alyatek/smspubli-api)
 
