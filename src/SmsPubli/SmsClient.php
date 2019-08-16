@@ -90,7 +90,7 @@ class SmsClient implements SmsClientInterface
             return $this;
         }
 
-        $this->message = ['Something went wrong is the status response answer.'];
+        $this->message = ['Something went wrong in the status response answer.'];
 
         return $this;
     }
