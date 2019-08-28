@@ -31,7 +31,7 @@ Make sure you also have an account at [SMSPUBLI](https://www.smspubli.com/).
   - Maybe I'll add support for more contacts in the future. If you don't want to wait just fork it and add to your needs, or if you want help this grow, open a pull request with the contact country code validation for the code you want.
 
 
-![Example Code](https://i.imgur.com/GV7twdS.png)
+![Example Code](https://i.imgur.com/yEDyni6.png)
 
 The request returns an array with a variable `status`, with the server request status(200 if request was ok).
 
