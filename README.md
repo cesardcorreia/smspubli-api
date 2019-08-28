@@ -1,12 +1,13 @@
 ⚠ DISCLAIMER : This is not even close to ready for production. This is my first public package so I have a lot to learn first.
 
 # SMSPUBLI API
-
-![PHP from Packagist](https://img.shields.io/packagist/php-v/alyatek/smspubli-api)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8fcdb2abf1cd4cae8abd358605caede3)](https://app.codacy.com/app/alyatek/smspubli-api?utm_source=github.com&utm_medium=referral&utm_content=alyatek/smspubli-api&utm_campaign=Badge_Grade_Dashboard)
-![CodeClimate](https://codeclimate.com/github/alyatek/smspubli-api/badges/gpa.svg)
-![Scrutinizer](https://scrutinizer-ci.com/g/alyatek/smspubli-api/badges/build.png?b=master)
-![Packagist](https://img.shields.io/packagist/l/alyatek/smspubli-api)
+<p align="center">
+<img alt="phpv" src="https://img.shields.io/packagist/php-v/alyatek/smspubli-api">
+<img alt="codacy" src="https://api.codacy.com/project/badge/Grade/8fcdb2abf1cd4cae8abd358605caede3">
+<img alt="codeclimate" src="https://codeclimate.com/github/alyatek/smspubli-api/badges/gpa.svg">
+<img alt="scrutinizer" src="https://scrutinizer-ci.com/g/alyatek/smspubli-api/badges/build.png?b=master">  
+<img alt="packagyst" src="https://img.shields.io/packagist/l/alyatek/smspubli-api">  
+</p>
 
 Even though their api documentation is super simple and easy to understand I wanted an even simpler way of using the api.
 The package is currently very simple and only does one thing, send a sms, even though it validates the numbers and certain contents, I want to improve it in the future.
