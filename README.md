@@ -30,7 +30,8 @@ Make sure you also have an account at [SMSPUBLI](https://www.smspubli.com/).
 - ❗ For now only Portuguese(+351) contacts can be filtered because the package is being used on a product for PT contacts. 
   - Maybe I'll add support for more contacts in the future. If you don't want to wait just fork it and add to your needs, or if you want help this grow, open a pull request with the contact country code validation for the code you want.
 
-<img alt="code" src="blob:https://carbon.now.sh/fa6713d2-a6bf-4ed0-98d1-49aea1704e8a">
+
+![Example Code](blob:https://carbon.now.sh/fa6713d2-a6bf-4ed0-98d1-49aea1704e8a)
 
 The request returns an array with a variable `status`, with the server request status(200 if request was ok).
 
