@@ -51,6 +51,9 @@ define('SMSNUMBER', 'CONTACT TO SEND');
 
 ```
 
+This is not an official package of smspubli.com, in the time of writing this is not, in anyway, affiliated or partned with smspubli.com .
+If I'm infringing any violation with the company image please let me know @ cesar@cesarcorreia.pt
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
