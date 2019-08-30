@@ -1,6 +1,8 @@
 ⚠ DISCLAIMER : This is not even close to ready for production. This is my first public package so I have a lot to learn first.
 
-# SMSPUBLI API
+<p align="center">
+  <img alt="logo" src="https://i.imgur.com/goWacyI.png">
+</p>
 <p align="center">
 <img alt="phpv" src="https://img.shields.io/packagist/php-v/alyatek/smspubli-api">
 <img alt="codacy" src="https://api.codacy.com/project/badge/Grade/8fcdb2abf1cd4cae8abd358605caede3">
