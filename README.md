@@ -1,7 +1,7 @@
 ⚠ DISCLAIMER : This is not even close to ready for production. This is my first public package so I have a lot to learn first.
 
 <p align="center">
-  <img alt="logo" src="blob:https://imgur.com/eb665093-7fd7-4a34-b35d-57b3cfa5678c">
+  <img alt="logo" src="https://i.imgur.com/ac9RgHZ.png">
 </p>
 <p align="center">
 <img alt="phpv" src="https://img.shields.io/packagist/php-v/alyatek/smspubli-api">
