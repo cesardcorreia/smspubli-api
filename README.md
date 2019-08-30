@@ -11,8 +11,8 @@
 <img alt="packagyst" src="https://img.shields.io/packagist/l/alyatek/smspubli-api">  
 </p>
 
-Even though their api documentation is super simple and easy to understand I wanted an even simpler way of using the api.
-The package is currently very simple and only does one thing, send a sms, even though it validates the numbers and certain contents, I want to improve it in the future.
+Even though their api documentation is super simple and easy to understand I wanted an even simpler way of using it.
+The package is currently very simple and only does one thing, sends a sms, even though it validates the numbers and certain contents, I want to improve it in the future.
 
 ## Installation
 
@@ -22,7 +22,7 @@ Use composer to install the package.
 composer require alyatek/smspubli-api
 ```
 
-Make sure you also have an account at [SMSPUBLI](https://www.smspubli.com/).
+Make sure you also have an account at [SMSPUBLI](https://www.smspubli.com/) and get your [key](https://panel.smspubli.com/app/api/api_key/).
 
 ## Usage
 
@@ -37,7 +37,7 @@ Make sure you also have an account at [SMSPUBLI](https://www.smspubli.com/).
 
 The request returns an array with a variable `status`, with the server request status(200 if request was ok).
 
-If it is success - results in a `success_msg`, `sms_id` and if it is an error - it returns `success_msg`, `sms_id`.
+If it is success - return an array a `success_msg`, `sms_id` and if it is an error - it returns an array with `success_msg`, `sms_id`.
 
 If Guzzle throws an error, it is returned a message with a status of false.
 
