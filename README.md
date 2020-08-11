@@ -42,14 +42,8 @@ If it is success - return an array a `success_msg`, `sms_id` and if it is an err
 If Guzzle throws an error, it is returned a message with a status of false.
 
 ### Testing
-For testing you need to create a config.php file inside tests folder and declare the following
-```php
-<?php
-
-define('SMSPUBLIKEY', 'YOUR API KEY');
-define('SMSNUMBER', 'CONTACT TO SEND');
-
-```
+For testing copy the ```phpunit.example.xml``` and define the variables with the SMS PUBLI api key and the others.
+Then just run ```./vendor/bin/phpunit tests``` to test.
 
 This is not an official package of smspubli.com, in the time of writing this is not, in anyway, affiliated or partned with smspubli.com .
 If I'm infringing any violation with the company image please let me know @ cesar@cesarcorreia.pt
