@@ -8,7 +8,7 @@ class SmsClient implements SmsClientInterface
 {
     protected $build;
     private $api_key, $from, $report_url;
-    public $message, $status;
+    public $message, $status, $test;
 
     /**
      * Calls the from validation function and assigns the general variables for API usage
@@ -19,12 +19,14 @@ class SmsClient implements SmsClientInterface
      * @param null $callback
      * @throws \Exception
      */
-    public function __construct($key, $from, $callback = null)
+    public function __construct($key, $from, $callback = null, $test = false)
     {
         $this->validate_from($from);
         $this->api_key = $key;
         $this->from = $from;
         $this->report_url = $callback;
+        $this->test = $test;
+
         return $this;
     }
 
@@ -87,6 +89,7 @@ class SmsClient implements SmsClientInterface
                 'success_msg' => 'Sent with success!',
                 'sms_id' => $status_response['result'][0]['sms_id']
             ];
+
             return $this;
         }
 
@@ -112,6 +115,7 @@ class SmsClient implements SmsClientInterface
                     'Accept' => 'application/json'
                 ],
                 'json' => [
+                    'fake' => $this->test,
                     'api_key' => $this->api_key,
                     'report_url' => 'http://localhost',
                     'concat' => 1,

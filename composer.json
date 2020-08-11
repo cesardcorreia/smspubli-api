@@ -9,7 +9,8 @@
     },
     "require-dev": {
         "guzzlehttp/guzzle": "^6.3",
-        "php": ">=7.0.0"
+        "php": ">=7.0.0",
+        "phpunit/phpunit": "^7"
     },
     "license": "MIT",
     "authors": [
