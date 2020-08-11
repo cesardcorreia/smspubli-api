@@ -23,7 +23,6 @@ class SmsClient extends ClientComponent implements SmsClientInterface
     public function __construct()
     {
         $this->init();
-
         $this->validate_from($this->from);
         $this->report_url = null;
 
