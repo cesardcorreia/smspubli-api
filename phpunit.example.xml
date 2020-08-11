@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<phpunit>
-    <php>
-        <env name="KEY" value=""/>
-        <env name="SMS_NAME" value=""/>
-        <env name="CONTACT_SEND" value=""/>
-    </php>
-</phpunit>

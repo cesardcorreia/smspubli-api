@@ -4,11 +4,12 @@ namespace SmsPubli;
 
 use GuzzleHttp\Client;
 
-class SmsClient implements SmsClientInterface
+class SmsClient extends ClientComponent implements SmsClientInterface
 {
     protected $build;
-    private $api_key, $from, $report_url;
-    public $message, $status, $test;
+    private $report_url;
+    public $message, $status;
+    public $api_key, $from, $debug, $contact_send;
 
     /**
      * Calls the from validation function and assigns the general variables for API usage
@@ -19,13 +20,12 @@ class SmsClient implements SmsClientInterface
      * @param null $callback
      * @throws \Exception
      */
-    public function __construct($key, $from, $callback = null, $test = false)
+    public function __construct()
     {
-        $this->validate_from($from);
-        $this->api_key = $key;
-        $this->from = $from;
-        $this->report_url = $callback;
-        $this->test = $test;
+        $this->init();
+
+        $this->validate_from($this->from);
+        $this->report_url = null;
 
         return $this;
     }
@@ -115,7 +115,7 @@ class SmsClient implements SmsClientInterface
                     'Accept' => 'application/json'
                 ],
                 'json' => [
-                    'fake' => $this->test,
+                    'fake' => $this->debug,
                     'api_key' => $this->api_key,
                     'report_url' => 'http://localhost',
                     'concat' => 1,

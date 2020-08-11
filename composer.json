@@ -5,7 +5,8 @@
     "require": {
         "guzzlehttp/guzzle": "^6.3",
         "php": ">=7.0.0",
-        "ext-json": "*"
+        "ext-json": "*",
+        "symfony/dotenv": "^5.2@dev"
     },
     "require-dev": {
         "guzzlehttp/guzzle": "^6.3",
