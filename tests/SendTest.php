@@ -7,9 +7,9 @@ use SmsPubli\SmsClient;
 class SendTest extends TestCase {
     public function testCanSendSMS () {
 
-        $sms_client = new SmsClient(getenv('KEY'), "BARBERSMS", null, true);
+        $sms_client = new SmsClient($_ENV['KEY'], $_ENV['SMS_NAME'], null, true);
         $send = $sms_client
-            ->send_sms("351912791994", 'Omds isto resultou com o primeiro pacote')
+            ->send_sms($_ENV['CONTACT_SEND'], 'This is a test message.')
             ->get_status();
 
         $this->assertArrayHasKey('status', $send);
