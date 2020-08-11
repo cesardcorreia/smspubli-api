@@ -45,6 +45,8 @@ If Guzzle throws an error, it is returned a message with a status of false.
 For testing copy the ```phpunit.example.xml``` and define the variables with the SMS PUBLI api key and the others.
 Then just run ```./vendor/bin/phpunit tests``` to test.
 
+-------
+
 This is not an official package of smspubli.com, in the time of writing this is not, in anyway, affiliated or partned with smspubli.com .
 If I'm infringing any violation with the company image please let me know @ cesar@cesarcorreia.pt
 
